@@ -102,7 +102,7 @@ async function updateWeatherInfo(city) {
     sunriseTime.textContent = formatTime(sunrise);
     sunsetTime.textContent = formatTime(sunset);
 
-    weatherSummaryImg.src = `assets/weather/${getWeatherIcon(icon)}`;
+    weatherSummaryImg.src = `./assets/weather/${getWeatherIcon(icon)}`;
 
     await updateForecastInfo(city);
 
