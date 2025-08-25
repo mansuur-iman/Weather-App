@@ -28,6 +28,12 @@ searchBtn.addEventListener("click", () => {
   }
 });
 
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && searchInput.value.trim() !== "") {
+    updateWeatherInfo(searchInput.value);
+    searchInput.value = "";
+  }
+});
 async function getFetchData(city) {
   const appUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${apiKey}`;
 
