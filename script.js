@@ -37,20 +37,30 @@ async function getFetchData(city) {
 }
 
 function getWeatherIcon(icon) {
-  const iconMap = {
-    "clear-day": "clear.png",
-    "clear-night": "clear-night.png",
-    "partly-cloudy-day": "partly-cloudy.png",
-    "partly-cloudy-night": "partly-cloudy-night.png",
-    cloudy: "cloudy.png",
-    rain: "rainy.png",
-    snow: "snow.png",
-    sleet: "sleet.png",
-    wind: "wind.png",
-    fog: "fog.png",
-  };
-
-  return iconMap[icon] || "clear.png";
+  switch (icon) {
+    case "clear-day":
+      return "clear.png";
+    case "clear-night":
+      return "night.png";
+    case "rain":
+      return "rain.png";
+    case "snow":
+      return "snow.png";
+    case "sleet":
+      return "sleet.png";
+    case "wind":
+      return "wind.png";
+    case "fog":
+      return "fog.png";
+    case "cloudy":
+      return "cloudy.png";
+    case "partly-cloudy-day":
+      return "partly-cloudy-day.png";
+    case "partly-cloudy-night":
+      return "partly-cloudy-night.png";
+    default:
+      return "default.png";
+  }
 }
 
 function getCurrentDate() {
@@ -92,7 +102,7 @@ async function updateWeatherInfo(city) {
     sunriseTime.textContent = formatTime(sunrise);
     sunsetTime.textContent = formatTime(sunset);
 
-    weatherSummaryImg.src = `/assets/weather/${getWeatherIcon(icon)}`;
+    weatherSummaryImg.src = `assets/weather/${getWeatherIcon(icon)}`;
 
     await updateForecastInfo(city);
 
