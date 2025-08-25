@@ -41,9 +41,9 @@ function getWeatherIcon(icon) {
     case "clear-day":
       return "clear.png";
     case "clear-night":
-      return "night.png";
+      return "clear-night.png";
     case "rain":
-      return "rain.png";
+      return "rainy.png";
     case "snow":
       return "snow.png";
     case "sleet":
@@ -55,11 +55,11 @@ function getWeatherIcon(icon) {
     case "cloudy":
       return "cloudy.png";
     case "partly-cloudy-day":
-      return "partly-cloudy-day.png";
+      return "partly-cloudy.png";
     case "partly-cloudy-night":
       return "partly-cloudy-night.png";
     default:
-      return "default.png";
+      return "cloudy.png";
   }
 }
 
