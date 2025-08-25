@@ -7,7 +7,7 @@ It shows current weather, sunrise & sunset times, and more.
 
 Here’s a screenshot of the app:
 
-![App Screenshot](./assets/screenshot.png)
+![App Screenshot](./assets/Screenshot.png)
 
 ## Features
 
